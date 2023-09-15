@@ -14,6 +14,9 @@ return require('packer').startup(function(use)
   }
 
   use({ 'rose-pine/neovim', as = 'rose-pine' })
+  use('rebelot/kanagawa.nvim')
+  use('sainnhe/everforest')
+  use('sainnhe/gruvbox-material')
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
@@ -52,4 +55,8 @@ return require('packer').startup(function(use)
   })
 
   use("theprimeagen/harpoon")
+  use {
+      'stevearc/conform.nvim',
+      config = function() require('conform').setup() end
+    }
 end)
