@@ -1,27 +1,10 @@
 #!/usr/bin/env bash
 
-# Install Homebrew
-echo "Installing Homebrew..."
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-echo "Homebrew installed!"
-
-# Install Oh My Zsh
-echo "Installing Oh My Zsh..."
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-echo "Oh My Zsh installed!"
-
 # Install neovim
 echo "Installing neovim..."
 brew install neovim
 brew install ripgrep
 echo "neovim installed!"
-
-# Install git
-echo "Installing git..."
-brew install git
-echo "git installed!"
-
-#
 
 # Run install scripts in dotfiles directories
 echo "Running install scripts..."
