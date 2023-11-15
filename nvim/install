@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
 
-# install packer
-
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-
 rm -rf ~/.config/nvim
 ln -s $(pwd)/nvim ~/.config/nvim
+
+# install packer
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+if [ -f "~/.local/share/nvim/site/pack/packer/start/packer.nvim" ]; then
+    echo "$PACKER exists."
+else
+    echo "$PACKER does not exist."
+fi

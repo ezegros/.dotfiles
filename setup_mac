@@ -5,7 +5,6 @@
 export PATH=/opt/homebrew/bin:$PATH
 
 # Install neovim
-echo "Installing neovim..."
 brew install neovim
 
 # Install ripgreg
