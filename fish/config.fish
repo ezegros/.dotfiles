@@ -13,6 +13,8 @@ set -gx DEFAULT_USER $USER
 set -gx EDITOR 'nvim'
 set -gx HSANDBOX_EDITOR 'nvim'
 set -gx GIT_EDITOR 'nvim'
+set -gx FZF_DEFAULT_COMMAND 'rg --files --hidden --follow --no-ignore-vcs'
+set -gx FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 
 fish_add_path "$HOME/bin"
 fish_add_path "/usr/local/bin"
