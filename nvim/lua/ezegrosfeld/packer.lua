@@ -59,4 +59,9 @@ return require('packer').startup(function(use)
         'stevearc/conform.nvim',
         config = function() require('conform').setup() end
     }
+
+    use 'mfussenegger/nvim-dap'
+    use 'leoluz/nvim-dap-go'
+    use 'rcarriga/nvim-dap-ui'
+    use 'theHamsta/nvim-dap-virtual-text'
 end)
