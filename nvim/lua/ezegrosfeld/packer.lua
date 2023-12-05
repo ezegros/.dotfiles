@@ -64,4 +64,15 @@ return require('packer').startup(function(use)
     use 'leoluz/nvim-dap-go'
     use 'rcarriga/nvim-dap-ui'
     use 'theHamsta/nvim-dap-virtual-text'
+
+    use {
+        'akinsho/flutter-tools.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim',
+            'stevearc/dressing.nvim', -- optional for vim.ui.select
+        },
+        config = function()
+            require("flutter-tools").setup {}
+        end
+    }
 end)
