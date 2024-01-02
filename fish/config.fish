@@ -24,3 +24,7 @@ fish_add_path "$HOME/.cargo/bin"
 fish_add_path "$HOME/development/flutter/bin"
 
 set -gx HOMEBREW_PREFIX "/opt/homebrew" # lookup using (brew --prefix)
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
