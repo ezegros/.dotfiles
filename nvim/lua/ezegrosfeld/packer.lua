@@ -1,9 +1,9 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 -- Only required if you have packer configured as `opt`
+--[[
 vim.cmd [[packadd packer.nvim]]
-
-return require('packer').startup(function(use)
+--[[ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
@@ -63,7 +63,7 @@ return require('packer').startup(function(use)
         }
     }
 
-     use {
+    use {
         'stevearc/conform.nvim',
         config = function() require('conform').setup() end
     }
@@ -83,4 +83,4 @@ return require('packer').startup(function(use)
             require("flutter-tools").setup {}
         end
     }
-end)
+end) --]]
