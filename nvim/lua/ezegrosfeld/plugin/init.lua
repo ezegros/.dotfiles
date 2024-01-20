@@ -17,5 +17,10 @@ return {
             'stevearc/dressing.nvim', -- optional for vim.ui.select
         },
         opts = {}
+    },
+
+    {
+        "j-hui/fidget.nvim",
+        opts = {},
     }
 }
