@@ -57,6 +57,11 @@ return {
                 capabilities = capabilities,
             }
 
+            lspconfig.bashls.setup {
+                on_attach = lspconfig.util.on_attach,
+                capabilities = capabilities,
+            }
+
             local cmp = require 'cmp'
             -- Set configuration for specific filetype.
             cmp.setup({
