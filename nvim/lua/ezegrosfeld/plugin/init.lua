@@ -5,6 +5,8 @@ return {
         'rebelot/kanagawa.nvim',
         config = function()
             vim.cmd.colorscheme("kanagawa")
+            vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+            vim.api.nvim_set_hl(0, "NormalFoat", { bg = "none" })
         end
     },
 
@@ -21,6 +23,12 @@ return {
 
     {
         "j-hui/fidget.nvim",
-        opts = {},
+        opts = {
+            notification = {
+                window = {
+                    winblend = 0
+                },
+            },
+        },
     }
 }
