@@ -18,7 +18,6 @@ set -gx FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
 
 fish_add_path "$HOME/bin"
 fish_add_path "/usr/local/bin"
-fish_add_path "$HOME/go/bin"
 fish_add_path "/opt/homebrew/bin"
 fish_add_path "$HOME/.cargo/bin"
 fish_add_path "$HOME/development/flutter/bin"
@@ -28,3 +27,7 @@ set -gx HOMEBREW_PREFIX "/opt/homebrew" # lookup using (brew --prefix)
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+set --export GOROOT "/usr/local/go"
+set --export GOPATH "$HOME/go"
+fish_add_path "$GORROT/bin"
