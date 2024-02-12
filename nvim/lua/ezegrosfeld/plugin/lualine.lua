@@ -1,6 +1,7 @@
 return {
     'nvim-lualine/lualine.nvim',
     opts = {
+        theme = 'kanagawa',
         options = {
             icons_enabled = false,
         },
