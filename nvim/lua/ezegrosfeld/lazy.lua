@@ -14,5 +14,4 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     spec = "ezegrosfeld.plugin",
     change_detection = { notify = false },
-    checker = { enabled = true },
 })
