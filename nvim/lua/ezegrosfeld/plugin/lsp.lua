@@ -3,6 +3,8 @@ return {
 
     { 'williamboman/mason-lspconfig.nvim' },
 
+    { 'towolf/vim-helm',                  ft = 'helm' },
+
     {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
@@ -41,6 +43,15 @@ return {
                     lsp.default_setup,
                     lua_ls = function()
                         require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+                        require('lspconfig').helm_ls.setup {
+                            settings = {
+                                ['helm-ls'] = {
+                                    yamlls = {
+                                        path = "yaml-language-server",
+                                    }
+                                }
+                            }
+                        }
                     end,
                 },
             })
