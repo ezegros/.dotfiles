@@ -3,8 +3,6 @@ if status is-interactive
     abbr -a -g vi nvim
 
     abbr -a -g - 'cd -'
-    abbr -a -g .. 'cd ..'
-    abbr -a -g ... 'cd ../../'
 
     abbr -a -g ga 'git add'
     abbr -a -g gap 'git add --patch'
@@ -34,4 +32,8 @@ if status is-interactive
     abbr -a -g gs 'git stash'
     abbr -a -g gd 'git diff'
     abbr -a -g gcp 'git cherry-pick'
+
+    abbr -a -g k 'kubectl'
+
+    abbr -a -g dots 'cd $HOME/.dotfiles'
 end
