@@ -1,4 +1,7 @@
 fish_variables
-fish/functions
-fish/completions
-fish/conf.d
+fish/conf.d/pure.fish
+*_pure*.fish
+*fzf*.fish
+fish/functions/fish_*.fish
+fish/functions/fisher.fish
+fish/completions/fisher.fish

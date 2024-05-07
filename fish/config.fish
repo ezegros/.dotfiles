@@ -1,33 +1,5 @@
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-    source $HOME/.config/fish/abbreviations.fish
-end
-
-# NOTE: allow expanding commands using C-e
-bind -M insert \cE forward-char
-
-# NOTE: disables "Welcome to Fish" greeting
-set fish_greeting
-
-set -gx DEFAULT_USER $USER
-set -gx EDITOR 'nvim'
-set -gx HSANDBOX_EDITOR 'nvim'
-set -gx GIT_EDITOR 'nvim'
-set -gx FZF_DEFAULT_COMMAND 'rg --files --hidden --follow --no-ignore-vcs'
-set -gx FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
-
-fish_add_path "$HOME/bin"
-fish_add_path "/usr/local/bin"
-fish_add_path "/opt/homebrew/bin"
-fish_add_path "$HOME/.cargo/bin"
-fish_add_path "$HOME/development/flutter/bin"
-
-set -gx HOMEBREW_PREFIX "/opt/homebrew" # lookup using (brew --prefix)
-
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
-
-set --export GOROOT "/usr/local/go"
-set --export GOPATH "$HOME/go"
-fish_add_path "$GORROT/bin"
+# Source conf.d/*.fish files
+source $HOME/.config/fish/conf.d/path.fish
+source $HOME/.config/fish/conf.d/colors.fish
+source $HOME/.config/fish/conf.d/abbreviations.fish
+source $HOME/.config/fish/conf.d/export.fish
