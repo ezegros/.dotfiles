@@ -10,10 +10,6 @@ brew install neovim
 # Install ripgreg
 brew install ripgrep
 
-# Install fzf
-brew install fzf
-$(brew --prefix)/opt/fzf/install
-
 # Install fish
 brew install fish
 
@@ -29,3 +25,7 @@ for file in ~/.dotfiles/*/install; do
     echo "Running $file..."
     bash "$file"
 done
+
+# Install fzf
+brew install fzf
+$(brew --prefix)/opt/fzf/install
