@@ -1,19 +1,22 @@
 return {
     'stevearc/conform.nvim',
-    opts = {
-        formatters_by_ft = {
-            lua = { "stylua" },
-            go = { "gofmt" },
-            -- Use a sub-list to run only the first available formatter
-            javascript = { { "prettierd", "prettier" } },
-            typescript = { { "prettierd", "prettier" } },
+    config = function()
+        require("conform").setup({
+            formatters_by_ft = {
+                lua = { "stylua" },
+                go = { "gofmt" },
+                rust = { "rustfmt" },
 
-            ["*"] = { "trim_whitespace" },
-        },
-        format_on_save = {
-            -- These options will be passed to conform.format()
-            timeout_ms = 500,
-            lsp_fallback = "always",
-        },
-    }
+                javascript = { { "prettierd", "prettier" } },
+                typescript = { { "prettier", "prettierd" } },
+                yaml = { "prettier", "prettierd" },
+
+                json = { "jq" },
+            },
+
+            format_on_save = {
+                lsp_fallback = true,
+            },
+        })
+    end
 }

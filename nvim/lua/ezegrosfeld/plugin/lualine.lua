@@ -1,17 +1,18 @@
 return {
     'nvim-lualine/lualine.nvim',
     opts = {
-        theme = 'kanagawa',
+        theme = 'rose-pine',
         options = {
             icons_enabled = false,
+            globalstatus = true,
         },
         sections = {
-            lualine_a = {},
+            lualine_a = { 'mode' },
             lualine_b = { 'branch', 'diff', 'diagnostics' },
             lualine_c = { { 'filename', path = 1 } },
             lualine_x = { 'filetype' },
             lualine_y = { 'location' },
             lualine_z = {}
-        },
+        }
     }
 }
