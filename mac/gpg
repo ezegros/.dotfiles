@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+mkdir -p ~/.gnupg
+echo "pinentry-program $(brew --prefix)/bin/pinentry-mac" > ~/.gnupg/gpg-agent.conf
+echo 'use-agent' > ~/.gnupg/gpg.conf
+fish -C 'source ~/.config/fish/config.fish'
+chmod 700 ~/.gnupg
+killall gpg-agent
