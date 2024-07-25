@@ -11,6 +11,10 @@ brew "tmux"
 
 brew "fzf"
 
+brew "gpg2"
+brew "gnupg"
+brew "pinentry-mac" 
+
 cask "alacritty"
 
 cask "raycast"
