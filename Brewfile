@@ -11,13 +11,6 @@ brew "tmux"
 
 brew "fzf"
 
-brew "rust"
-brew "rustup"
-brew "go"
-brew "gleam"
-brew "node"
-brew "oven-sh/bun/bun"
-
 brew "gpg2"
 brew "gnupg"
 brew "pinentry-mac" 
