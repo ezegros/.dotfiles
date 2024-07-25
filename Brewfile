@@ -21,6 +21,8 @@ cask "raycast"
 
 cask "orbstack"
 
+cask "zed"
+
 # Work
 cask "slack"
 
