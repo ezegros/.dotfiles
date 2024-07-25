@@ -7,3 +7,5 @@ fish/functions/fisher.fish
 fish/completions/fisher.fish
 
 tmux/plugins
+
+Brewfile.lock.json

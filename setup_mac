@@ -1,23 +1,12 @@
 #!/usr/bin/env bash
 
 # Install brew
+if command -p brew >/dev/null 2>&1; then
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 export PATH=/opt/homebrew/bin:$PATH
+fi
 
-# Install neovim
-brew install neovim
-
-# Install ripgreg
-brew install ripgrep
-
-# Install fish
-brew install fish
-
-# Install tmux
-brew install tmux
-
-# Install alacritty
-brew install --cask alacritty
+brew bundle
 
 # Run install scripts in dotfiles directories
 echo "Running install scripts..."
@@ -26,6 +15,4 @@ for file in ~/.dotfiles/*/install; do
     bash "$file"
 done
 
-# Install fzf
-brew install fzf
 $(brew --prefix)/opt/fzf/install
