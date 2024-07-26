@@ -11,9 +11,19 @@ brew "tmux"
 
 brew "fzf"
 
+brew "jq"
+
+brew "derailed/k9s/k9s"
+
+brew "redis"
+
 brew "gpg2"
+
 brew "gnupg"
+
 brew "pinentry-mac" 
+
+cask "arc"
 
 cask "alacritty"
 
@@ -23,12 +33,25 @@ cask "orbstack"
 
 cask "zed"
 
+cask "dbeaver-community"
+
+cask "insomnia"
+
+cask "linear-linear"
+
+cask "figma"
+
+
 # Work
+brew "awscli"
+
 cask "slack"
 
 cask "notion"
 
 cask "clickup"
+
+cask "postman"
 
 # Personal
 cask "arc"

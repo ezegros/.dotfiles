@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [ -d "$HOME/Library/Fonts" ]; then
+  cp $(pwd)/fonts/* $HOME/Library/Fonts
+fi
+
+if [ -d "/usr/local/share/fonts" ]; then
+  cp $(pwd)/fonts/* /usr/share/fonts
+fi
