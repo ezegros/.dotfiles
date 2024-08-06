@@ -13,6 +13,8 @@ brew "fzf"
 
 brew "jq"
 
+brew "scc"
+
 brew "derailed/k9s/k9s"
 
 brew "redis"
