@@ -25,6 +25,8 @@ brew "gnupg"
 
 brew "pinentry-mac" 
 
+brew "zoxide"
+
 cask "arc"
 
 cask "alacritty"
