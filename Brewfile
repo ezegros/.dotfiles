@@ -1,6 +1,5 @@
 cask_args appdir: "~/Applications", require_sha: true
 
-# Dev tools
 brew "neovim"
 
 brew "ripgrep"
@@ -27,10 +26,6 @@ brew "pinentry-mac"
 
 brew "zoxide"
 
-cask "arc"
-
-cask "alacritty"
-
 cask "raycast"
 
 cask "orbstack"
@@ -41,27 +36,4 @@ cask "dbeaver-community"
 
 cask "insomnia"
 
-cask "linear-linear"
-
-cask "figma"
-
-
-# Work
-brew "awscli"
-
-cask "slack"
-
-cask "notion"
-
-cask "clickup"
-
-cask "postman"
-
-# Personal
-cask "arc"
-
-cask "spotify", args: { require_sha: false }
-
-cask "discord"
-
-cask "obsidian"
+cask "ghostty"
