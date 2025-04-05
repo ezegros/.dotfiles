@@ -1,7 +1,7 @@
 return {
     'nvim-lualine/lualine.nvim',
     opts = {
-        theme = 'rose-pine',
+        theme = 'everforest',
         options = {
             icons_enabled = false,
             globalstatus = true,
