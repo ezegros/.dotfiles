@@ -2,7 +2,7 @@ if status is-interactive
     abbr -a -g vim nvim
     abbr -a -g vi nvim
 
-    abbr -a -g - 'cd -'
+    abbr -a -g - 'z -'
 
     abbr -a -g ga 'git add'
     abbr -a -g gap 'git add --patch'
