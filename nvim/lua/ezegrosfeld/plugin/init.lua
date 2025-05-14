@@ -4,15 +4,6 @@ return {
     'github/copilot.vim',
 
     {
-        'akinsho/flutter-tools.nvim',
-        requires = {
-            'nvim-lua/plenary.nvim',
-            'stevearc/dressing.nvim', -- optional for vim.ui.select
-        },
-        opts = {}
-    },
-
-    {
         "j-hui/fidget.nvim",
         opts = {
             notification = {
