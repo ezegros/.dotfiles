@@ -6,3 +6,10 @@ source $HOME/.config/fish/conf.d/export.fish
 source $HOME/.config/fish/conf.d/gpg.fish
 source $HOME/.config/fish/conf.d/zoxide.fish
 source $HOME/.config/fish/conf.d/orbstack.fish
+
+# pnpm
+set -gx PNPM_HOME "/Users/ezekielgrosfeld/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
