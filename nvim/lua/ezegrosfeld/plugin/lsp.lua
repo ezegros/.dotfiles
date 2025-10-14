@@ -44,7 +44,9 @@ return {
                         return
                     end
                 end
-                client.config.settings.Lua = vim.tbl_deep_extend("force", client.config.settings.Lua, {
+            end,
+            settings = {
+                Lua = {
                     runtime = {
                         version = "LuaJIT",
                     },
@@ -55,13 +57,19 @@ return {
                             "${3rd}/luv/library",
                         },
                     },
-                })
-            end,
-            settings = {
-                Lua = {
                     telemetry = {
                         enable = false,
                     },
+                },
+            },
+        }
+
+        vim.lsp.config.tailwindcss = {
+            capabilities = capabilities,
+            on_attach = on_attach,
+            settings = {
+                tailwindCSS = {
+                    classFunctions = { "cva", "cx" },
                 },
             },
         }

@@ -6,11 +6,6 @@ return {
                 lua = { "stylua" },
                 go = { "gofmt" },
                 rust = { "rustfmt" },
-
-                javascript = { { "prettierd", "prettier" } },
-                typescript = { { "prettier", "prettierd" } },
-                yaml = { "prettier", "prettierd" },
-
                 json = { "jq" },
             },
 

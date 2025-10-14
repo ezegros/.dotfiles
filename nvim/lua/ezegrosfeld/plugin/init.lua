@@ -5,13 +5,7 @@ return {
 
     {
         "j-hui/fidget.nvim",
-        opts = {
-            notification = {
-                window = {
-                    winblend = 0
-                },
-            },
-        },
+        opts = {},
     },
 
     'nvim-treesitter/nvim-treesitter-context',
