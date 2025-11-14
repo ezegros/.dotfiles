@@ -4,9 +4,14 @@ return {
         "nvim-neotest/nvim-nio",
         "nvim-lua/plenary.nvim",
         "antoinemadec/FixCursorHold.nvim",
-        "nvim-treesitter/nvim-treesitter",
         "rouge8/neotest-rust",
-        "fredrikaverpil/neotest-golang",
+        {
+            "fredrikaverpil/neotest-golang",
+            version = "*",
+            build = function()
+                vim.system({ "go", "install", "gotest.tools/gotestsum@latest" }):wait()
+            end,
+        },
         "leoluz/nvim-dap-go",
     },
     config = function()
@@ -15,6 +20,7 @@ return {
             adapters = {
                 require("neotest-rust"),
                 require("neotest-golang")({
+                    runner = "gotestsum",
                     dap = { justMyCode = false },
                 }),
             }
