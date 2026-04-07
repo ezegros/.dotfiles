@@ -28,7 +28,7 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/lua/ezegrosfeld/plugin<CR>");
+vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/lua/ezegrosfeld/pack.lua<CR>");
 
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
@@ -42,3 +42,16 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help)
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
 vim.keymap.set("n", "<leader>a", vim.lsp.buf.code_action)
+
+vim.keymap.set('i', '<CR>', function()
+  if vim.fn.pumvisible() ~= 0 then
+    return vim.api.nvim_replace_termcodes('<C-y>', true, true, true)
+  else
+    return vim.api.nvim_replace_termcodes('<CR>', true, true, true)
+  end
+end, { expr = true, noremap = true })
+
+vim.keymap.set("n", "<leader>u", function()
+    vim.cmd("packadd nvim.undotree")
+    vim.cmd("Undotree")
+end)

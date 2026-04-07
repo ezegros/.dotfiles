@@ -27,3 +27,11 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
+
+vim.o.complete = ".,o"
+vim.o.autocomplete = true
+vim.api.nvim_set_hl(0, "Pmenu", { bg = "none" })
+vim.o.pummaxwidth = 80
+vim.o.completeopt = "fuzzy,menuone,noselect,menu,nearest"
+
+require("vim._core.ui2").enable({})
