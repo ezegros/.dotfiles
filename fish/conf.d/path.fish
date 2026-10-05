@@ -19,6 +19,3 @@ set -x PATH $PATH $GOROOT/bin $GOPATH/bin
 
 # Rust
 set -g fish_user_paths $HOME/.cargo/bin $fish_user_paths
-
-# Flutter
-set -g fish_user_paths $HOME/development/flutter/bin $fish_user_paths
