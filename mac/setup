@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 
 # Install brew
-if command -p brew >/dev/null 2>&1; then
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-export PATH=/opt/homebrew/bin:$PATH
+if [ ! -x /opt/homebrew/bin/brew ]; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Install scripts link $(pwd)/<dir>, so run everything from the repo root
+cd ~/.dotfiles
 
 brew bundle
 
