@@ -1,0 +1,10 @@
+{
+  "mcp": {
+    "servers": {
+      "wispr": {
+        "type": "remote",
+        "url": "https://api.wisprflow.ai/connect/mcp"
+      }
+    }
+  }
+}

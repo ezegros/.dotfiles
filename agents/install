@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# A real ~/.agents may hold local-only skills; don't delete it
+if [ -e ~/.agents ] && [ ! -L ~/.agents ]; then
+    echo "~/.agents is a directory, move its contents into $(pwd)/agents first" >&2
+    exit 1
+fi
+ln -sfn "$(pwd)/agents" ~/.agents
+
+# Link each skill into Claude Code
+mkdir -p ~/.claude/skills
+for skill in ~/.agents/skills/*/; do
+    name=$(basename "$skill")
+    dest=~/.claude/skills/$name
+    if [ -e "$dest" ] && [ ! -L "$dest" ]; then
+        echo "Skipping $name: $dest is not a link" >&2
+        continue
+    fi
+    ln -sfn "../../.agents/skills/$name" "$dest"
+done

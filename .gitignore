@@ -5,3 +5,7 @@ fish/conf.d/pure.fish
 fish/functions/fish_*.fish
 fish/functions/fisher.fish
 fish/completions/fisher.fish
+
+# Work material, kept local (this repo is public)
+agents/context/
+agents/skills-archive/
