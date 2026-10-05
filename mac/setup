@@ -17,5 +17,3 @@ for file in ~/.dotfiles/*/install; do
     echo "Running $file..."
     bash "$file"
 done
-
-$(brew --prefix)/opt/fzf/install --all
