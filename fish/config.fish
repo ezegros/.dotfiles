@@ -8,7 +8,7 @@ source $HOME/.config/fish/conf.d/zoxide.fish
 source $HOME/.config/fish/conf.d/orbstack.fish
 
 # pnpm
-set -gx PNPM_HOME "/Users/ezekielgrosfeld/Library/pnpm"
+set -gx PNPM_HOME "$HOME/Library/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
