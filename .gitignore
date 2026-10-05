@@ -4,7 +4,7 @@ fish/conf.d/pure.fish
 *fzf*.fish
 fish/functions/fish_*.fish
 fish/functions/fisher.fish
-fish/completions/fisher.fish
+fish/completions/
 
 # Work material, kept local (this repo is public)
 agents/context/
