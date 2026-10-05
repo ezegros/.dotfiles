@@ -16,8 +16,6 @@ brew "scc"
 
 brew "redis"
 
-brew "gpg2"
-
 brew "gnupg"
 
 brew "pinentry-mac" 
