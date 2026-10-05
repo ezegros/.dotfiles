@@ -12,3 +12,5 @@ alias jd 'jj desc'
 alias jf 'jj git fetch'
 alias jn 'jj new'
 alias jp 'jj git push'
+
+alias zed '/Applications/Zed.app/Contents/MacOS/cli'
