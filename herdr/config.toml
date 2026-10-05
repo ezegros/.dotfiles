@@ -1,0 +1,58 @@
+onboarding = false
+
+[theme]
+name = "terminal"
+auto_switch = false
+
+# Everforest dark medium — the palette from ~/.config/tmux/tmux.conf
+[theme.custom]
+text = "#d3c6aa"        # fg
+subtext0 = "#859289"    # grey1
+panel_bg = "#232a2e"    # bg_dim (tmux status-style bg)
+surface_dim = "#232a2e" # bg_dim
+surface0 = "#2d353b"    # bg0
+surface1 = "#343f44"    # bg1
+overlay0 = "#475258"    # bg3
+overlay1 = "#4f585e"    # bg4
+accent = "#a7c080"      # green / statusline1
+green = "#a7c080"
+red = "#e67e80"
+yellow = "#dbbc7f"
+blue = "#7fbbb3"
+teal = "#83c092"        # aqua
+peach = "#e69875"       # orange
+mauve = "#d699b6"       # purple
+
+[terminal]
+# tmux: set-option -g default-shell /opt/homebrew/bin/fish
+default_shell = "/opt/homebrew/bin/fish"
+shell_mode = "auto"
+# tmux: split-window -c "#{pane_current_path}"
+new_cwd = "follow"
+
+[ui]
+agent_panel_sort = "spaces"
+show_agent_labels_on_pane_borders = true
+
+[ui.toast]
+delivery = "terminal"
+
+[keys]
+# tmux: unbind C-b; set -g prefix C-Space
+prefix = "ctrl+space"
+
+# tmux: bind '_' split-window -v  -> new pane below
+split_horizontal = "prefix+_"
+# tmux: bind '|' split-window -h  -> new pane to the right
+split_vertical = "prefix+|"
+
+# tmux: bind -r h/j/k/l select-pane -L/-D/-U/-R
+focus_pane_left = "prefix+h"
+focus_pane_down = "prefix+j"
+focus_pane_up = "prefix+k"
+focus_pane_right = "prefix+l"
+
+# tmux: bind r source-file ~/.config/tmux/tmux.conf
+reload_config = "prefix+r"
+# moved off prefix+r (herdr's default) so reload can take it, as in tmux
+resize_mode = "prefix+shift+r"

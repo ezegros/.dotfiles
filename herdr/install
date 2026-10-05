@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# ~/.config/herdr also holds logs, sockets and sessions, so link only the config
+mkdir -p ~/.config/herdr
+ln -sf "$(pwd)/herdr/config.toml" ~/.config/herdr/config.toml
