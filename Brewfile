@@ -1,5 +1,3 @@
-cask_args appdir: "~/Applications", require_sha: true
-
 brew "neovim"
 
 brew "ripgrep"
@@ -21,15 +19,3 @@ brew "gnupg"
 brew "pinentry-mac" 
 
 brew "zoxide"
-
-cask "raycast"
-
-cask "orbstack"
-
-cask "zed"
-
-cask "dbeaver-community"
-
-cask "insomnia"
-
-cask "ghostty"
