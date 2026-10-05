@@ -4,8 +4,6 @@ brew "ripgrep"
 
 brew "fish"
 
-brew "tmux"
-
 brew "fzf"
 
 brew "jq"

@@ -5,5 +5,3 @@ fish/conf.d/pure.fish
 fish/functions/fish_*.fish
 fish/functions/fisher.fish
 fish/completions/fisher.fish
-
-tmux/plugins
