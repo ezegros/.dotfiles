@@ -19,3 +19,9 @@ brew "gnupg"
 brew "pinentry-mac" 
 
 brew "zoxide"
+
+brew "tree-sitter-cli"
+
+brew "node"
+
+brew "pnpm"
