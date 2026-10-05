@@ -25,3 +25,11 @@ brew "tree-sitter-cli"
 brew "node"
 
 brew "pnpm"
+
+brew "awscli"
+
+brew "eza"
+
+brew "gh"
+
+brew "sccache"
